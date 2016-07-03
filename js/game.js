@@ -11,8 +11,11 @@ var gameMenu = {
 	}
 }
 
-function countDown() {
+function countDown(duration) {
 	var timer = duration;
+	if (--timer < 0) {
+		timer = duration;
+	}
 }
 
 function startGame() {
