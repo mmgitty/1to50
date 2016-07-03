@@ -115,6 +115,7 @@ h1.title {
 	display: block;
 	text-align: center;
 	float: right; 
+	cursor: pointer;
 }
 
 p {
@@ -124,10 +125,12 @@ p {
 }
 
 a {
-	color: #776e65;
 	font-weight: bold;
-	text-decoration: underline;
 	cursor: pointer; 
+}
+
+a:hover {
+	color: yellow;
 }
 
 .game-container {
@@ -138,13 +141,12 @@ a {
 	background: #CCA28D;
 	border: #999 1px solid;
 	border-radius: 10px;
-	width: 575px;
-	height: 575px;
+	width: 570px;
+	height: 570px;
 	padding: 20px;
-	margin: 0px auto;
+	margin: 15px auto;
 }
 
-/*#game-container > div {*/
 #tile {
 	background: #806558;
 	border-radius: 5px;
@@ -161,8 +163,7 @@ a {
 
 #start-button {
 	background: #806558;
-	border-radius: 5px;
-	display: table-cell;
+	border-radius: 20px;
 	vertical-align: middle;
 	width: 350px;
 	height: 100px;
@@ -171,4 +172,13 @@ a {
 	color: #ffffff;
 	cursor: pointer;
 	text-align: center;
+	margin: 190px auto;
+}
+
+#timer {
+	font-size: 150px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+    margin: 150px auto;
 }
