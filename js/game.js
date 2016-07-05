@@ -15,7 +15,7 @@ var gameMenu = {
 // Game Over Menu
 var gameOver = {
 	start: function() {
-		var output = '<div id="game-over">Your Score is<br />' +
+		var output = '<div id="game-over">Your Time is<br />' +
 			'<strong>' + $('.score-container').text() + '</strong><br /></div>' +
 			'<div id="restart-button" onclick="restartGame()">' +
 			'Restart' + '</div>';
@@ -38,9 +38,7 @@ function shuffle(a) {
 function newBoard() {
 	shuffle(num_array);
 	var output = '';
-	var score = setInterval(function() {
-
-	}, 10);
+	// var score = setInterval(10);
 	for (var i = 0; i < 25; i++) {
 		output += '<div id="tile" onclick="clickTile(this)">' + num_array[i] +'</div>';
 	}
@@ -63,11 +61,7 @@ function clickTile(tile) {
 			});
 			if (current_num == 50) {
 				// load game over screen and reset all variables.
-				scoreStop();
-				gameOver.start();
-				updateBest();
-				// scoreReset();
-				gameReset();
+				endGame();
 			}
 		}
 	} else {
@@ -107,11 +101,19 @@ function restartGame() {
 	startGame();
 }
 
+// end game.
+function endGame() {
+	scoreStop();
+	gameOver.start();
+	updateBest();
+	gameReset();
+}
+
 // function for updating best time.
 function updateBest() {
 	if (parseFloat($('.score-container').text()) < best_score) {
 		best_score = parseFloat($('.score-container').text());
-		$('.best-container').html(best_score);
+		$('.best-container').html($('.score-container').text());
 	}
 }
 
