@@ -94,7 +94,7 @@ function scoreStop() {
 }
 
 function scoreReset() {
-	stop();
+	scoreStop();
 	x.reset();
 	update();
 }
