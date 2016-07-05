@@ -3,7 +3,6 @@ html, body {
 	padding: 0;
 	background: #faf8ef;
 	color: #776e65;
-	font-family: "Clear Sans", "Helvetica Neue", Arial, sans-serif;
 	font-size: 18px; 
 }
 
@@ -43,15 +42,14 @@ h1.title {
 	position: relative;
 	display: inline-block;
 	background: #806558;
-	padding: 15px 45px;
+	padding: 15px;
 	font-size: 25px;
-	/*height: 25px;*/
-	/*line-height: 47px;*/
 	font-weight: bold;
 	border-radius: 3px;
 	color: white;
 	margin-top: 8px;
-	text-align: center; 
+	text-align: center;
+	width: 120px;
 }
 
 .score-container:after, .best-container:after {
@@ -66,29 +64,12 @@ h1.title {
     color: #eee4da; 
 }
 
-.score-container .score-addition, .best-container .score-addition {
-    position: absolute;
-    right: 30px;
-    color: red;
-    font-size: 25px;
-    line-height: 25px;
-    font-weight: bold;
-    color: rgba(119, 110, 101, 0.9);
-    z-index: 100;
-    -webkit-animation: move-up 600ms ease-in;
-    -moz-animation: move-up 600ms ease-in;
-    animation: move-up 600ms ease-in;
-    -webkit-animation-fill-mode: both;
-    -moz-animation-fill-mode: both;
-    animation-fill-mode: both; 
-}
-
 .score-container:after {
-	content: "Score"; 
+	content: "Time"; 
 }
 
 .best-container:after {
-	content: "Best"; 
+	content: "Best Time"; 
 }
 
 .above-game:after {
@@ -129,15 +110,12 @@ a {
 	cursor: pointer; 
 }
 
-a:hover {
+.above-game a:hover {
 	color: yellow;
 }
 
-.game-container {
-	margin-top: 40px;
-}
-
 #game-container {
+	margin-top: 40px;
 	background: #CCA28D;
 	border: #999 1px solid;
 	border-radius: 10px;
@@ -181,4 +159,26 @@ a:hover {
     vertical-align: middle;
     color: white;
     margin: 150px auto;
+}
+
+#game-over {
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	color: white;
+	margin: 50px auto;
+}
+
+#restart-button {
+	background: #806558;
+	border-radius: 20px;
+	vertical-align: middle;
+	width: 350px;
+	height: 100px;
+	font-size: 50px;
+	padding: 15px;
+	color: #ffffff;
+	cursor: pointer;
+	text-align: center;
+	margin: 50px auto;
 }

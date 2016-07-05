@@ -19,20 +19,26 @@
 		<div class="heading">
 			<h1 class="title">1to50</h1>
 			<div class="scores-container">
-				<div class="score-container">0</div>
-				<div class="best-container">0</div>
+				<div class="score-container">0.000</div>
+				<div class="best-container">0.000</div>
 			</div>
 		</div>
 
 		<div class="above-game">
 			<p class="game-intro">Click from <strong>1 to 50</strong> as quickly as you can!</p>
-			<a class="restart-button" onclick="startGame()">New Game</a>
+			<a class="restart-button" onclick="restartGame()">New Game</a>
 		</div>
 
 		<div class="game-container" id="game-container">
 			<div id="game-content"></div>
 		</div>
+
+		<div class="footer">
+			<p>Created by <a href="http://mwkim.net76.net/">Minwoo Kim</a> | Copyright &copy; 2016 Minwoo Kim</p>
+		</div>
 	</div>
+	
+	<script src="js/score.js"></script>
 	<script src="js/game.js"></script>
 </body>
 </html>
