@@ -115,7 +115,6 @@ a {
 }
 
 #game-container {
-	margin-top: 40px;
 	background: #CCA28D;
 	border: #999 1px solid;
 	border-radius: 10px;
@@ -123,6 +122,13 @@ a {
 	height: 570px;
 	padding: 20px;
 	margin: 15px auto;
+	-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    touch-action: none;
 }
 
 #tile {
@@ -181,4 +187,203 @@ a {
 	cursor: pointer;
 	text-align: center;
 	margin: 50px auto;
+}
+
+@media only screen and (max-device-width: 480px) {
+	html, body {
+	margin: 0;
+	padding: 0;
+	background: #faf8ef;
+	color: #776e65;
+	font-size: 30px; 
+	}
+
+	body {
+		margin: 40px 0; 
+	}
+
+	div {
+		display: block;
+	}
+
+	.container {
+		width: 800px;
+		margin: 0px auto;
+	}
+
+	.heading:after {
+		content: "";
+		display: block;
+		clear: both; 
+	}
+
+	h1.title {
+		font-size: 100px;
+		font-weight: bold;
+		margin: 0;
+		display: block;
+		float: left;
+	}
+
+	.scores-container {
+		float: right;
+		text-align: right;
+	}
+
+	.score-container, .best-container {
+		position: relative;
+		display: inline-block;
+		background: #806558;
+		padding: 23px;
+		font-size: 40px;
+		font-weight: bold;
+		border-radius: 3px;
+		color: white;
+		margin-top: 8px;
+		text-align: center;
+		width: 210px;
+	}
+
+	.score-container:after, .best-container:after {
+	    position: absolute;
+	    width: 100%;
+	    top: 15px;
+	    left: 0;
+	    text-transform: uppercase;
+	    font-size: 25px;
+	    line-height: 13px;
+	    text-align: center;
+	    color: #eee4da;
+	}
+
+	.score-container:after {
+		content: "Time";
+	}
+
+	.best-container:after {
+		content: "Best Time"; 
+	}
+
+	.above-game:after {
+		content: "";
+		display: block;
+		clear: both; 
+	}
+
+	.game-intro {
+		float: left;
+		width: 55%;
+		line-height: 45px;
+		margin-bottom: 0;
+		margin-top: 20px;
+		font-size: 37px;
+	}
+
+	.restart-button {
+		display: inline-block;
+		background: #806558;
+		border-radius: 5px;
+		padding: 20px;
+		text-decoration: none;
+		color: #f9f6f2;
+		width: 42%;
+		height: 90px;
+		line-height: 42px;
+		display: block;
+		text-align: center;
+		float: right; 
+		cursor: pointer;
+		margin-top: 20px;
+		font-size: 40px;
+	}
+
+	p {
+		margin-top: 0;
+		margin-bottom: 10px;
+		line-height: 1.65; 
+	}
+
+	a {
+		font-weight: bold;
+		cursor: pointer; 
+	}
+
+	.above-game a:hover {
+		color: yellow;
+	}
+
+	#game-container {
+		background: #CCA28D;
+		border: #999 1px solid;
+		border-radius: 20px;
+		width: 750px;
+		height: 750px;
+		padding: 20px;
+		margin: 60px auto;
+		-webkit-touch-callout: none;
+	    -webkit-user-select: none;
+	    -khtml-user-select: none;
+	    -moz-user-select: none;
+	    -ms-user-select: none;
+	    user-select: none;
+	    touch-action: none;
+	}
+
+	#tile {
+		background: #806558;
+		border-radius: 10px;
+		width: 135px;
+		height: 135px;
+		float: left;
+		margin: 4px 2px 2px 4px;
+		padding: 5px;
+		font-size: 85px;
+		color: #ffffff;
+		cursor: pointer;
+		text-align: center;
+	}
+
+	#start-button {
+		background: #806558;
+		border-radius: 20px;
+		vertical-align: middle;
+		width: 500px;
+		height: 120px;
+		font-size: 60px;
+		padding: 15px;
+		color: #ffffff;
+		cursor: pointer;
+		text-align: center;
+		margin: 260px auto;
+	}
+
+	#timer {
+		font-size: 250px;
+	    text-align: center;
+	    vertical-align: middle;
+	    color: white;
+	    margin: 150px auto;
+	}
+
+	#game-over {
+		font-size: 80px;
+		text-align: center;
+		vertical-align: middle;
+		color: white;
+		margin: 70px auto;
+	}
+
+	#restart-button {
+		background: #806558;
+		border-radius: 20px;
+		vertical-align: middle;
+		width: 450px;
+		height: 130px;
+		font-size: 70px;
+		padding: 15px;
+		color: #ffffff;
+		cursor: pointer;
+		text-align: center;
+		margin: 50px auto;
+	}
 }
