@@ -49,14 +49,14 @@ function newBoard() {
 function clickTile(tile) {
 	if (tile.innerHTML == current_num) {
 		if (current_num <= 25) {
-			$(tile).fadeOut(160, function() {
-				$(tile).text(next_num).fadeIn(160);
+			$(tile).fadeOut(90, function() {
+				$(tile).text(next_num).fadeIn(90);
 				current_num++;
 				next_num++;
 			});
 		} else {
-			$(tile).fadeOut(160, function() {
-				$(tile).text("").fadeIn(160);
+			$(tile).fadeOut(90, function() {
+				$(tile).text("").fadeIn(90);
 				current_num++;
 			});
 			if (current_num == 50) {
@@ -91,6 +91,13 @@ function startGame() {
 			$('#timer').html(counter);
 		}
 	}, 1000);
+}
+
+function newGame() {
+	scoreStop();
+	scoreReset();
+	gameReset();
+	gameMenu.start();
 }
 
 // re-starting game.
