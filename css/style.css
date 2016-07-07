@@ -189,6 +189,16 @@ a {
 	margin: 50px auto;
 }
 
+.footer {
+	text-align: center;
+}
+
+#fb iframe {
+	width: 90px; 
+	height: 30px; 
+}
+
+
 @media only screen and (max-device-width: 480px) {
 	html, body {
 	margin: 0;
@@ -385,5 +395,14 @@ a {
 		cursor: pointer;
 		text-align: center;
 		margin: 50px auto;
+	}
+
+	#fb iframe {
+		margin: 50px;
+		transform: scale(2.5);
+		-ms-transform: scale(2.5); 
+		-webkit-transform: scale(2.5); 
+		-o-transform: scale(2.5); 
+		-moz-transform: scale(2.5); 
 	}
 }
