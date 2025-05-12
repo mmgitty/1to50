@@ -36,14 +36,17 @@ function shuffle(a) {
 }
 
 // Function for creating game borad.
+// [no other changes until tile generation]
 function newBoard() {
-	shuffle(num_array);
-	var output = '';
-	// var score = setInterval(10);
-	for (var i = 0; i < 25; i++) {
-		output += '<div id="tile" onclick="clickTile(this)">' + num_array[i] +'</div>';
-	}
-	$('.game-container').html(output);
+  shuffle(num_array);
+  var output = '';
+  for (var i = 0; i < 25; i++) {
+    // use class="tile" for grid items
+    output += '<div class="tile" onclick="clickTile(this)">'
+           + num_array[i]
+           + '</div>';
+  }
+  $('.game-container').html(output);
 }
 
 // Function that handles tile clicking events.
