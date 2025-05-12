@@ -115,20 +115,31 @@ a {
 }
 
 #game-container {
-	background: #CCA28D;
-	border: #999 1px solid;
-	border-radius: 10px;
-	width: 570px;
-	height: 570px;
-	padding: 20px;
-	margin: 15px auto;
-	-webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-    touch-action: none;
+  /* make the box always square, fluid, and never overflow the viewport */
+  box-sizing: border-box;
+  width: 90vw;            /* 90% of the device width */
+  max-width: 610px;       /* never wider than its natural 570+40px */
+  aspect-ratio: 1 / 1;    /* force a 1:1 square */
+  height: auto;           /* let aspect-ratio calculate the height */
+  max-height: 90vh;       /* but never taller than 90% of the viewport */
+  
+  /* scale padding relative to viewport */
+  padding: 2vw;           /* ~20px on a 1000px screen, scales down on mobile */
+
+  /* keep your existing styling */
+  margin: 15px auto;
+  background: #CCA28D;
+  border: 1px solid #999;
+  border-radius: 10px;
+
+  /* preserve your touch‐ and select‐locking rules */
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+     touch-action: none;
 }
 
 #tile {
