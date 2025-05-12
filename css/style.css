@@ -1,7 +1,7 @@
-/* 1to50 Responsive Style */
-
+/* 1to50 Responsive & Fluid Styles */
 html, body {
-  margin: 0; padding: 0;
+  margin: 0;
+  padding: 0;
   width: 100%; height: 100%;
   overflow: hidden;
   background: #faf8ef;
@@ -9,7 +9,7 @@ html, body {
   font-family: "Clear Sans", Arial, sans-serif;
 }
 
-/* Heading & scores */
+/* Centered heading and scores */
 .container {
   width: 90vw;
   max-width: 600px;
@@ -30,20 +30,36 @@ h1.title {
   display: flex;
   gap: 2vw;
 }
-.score-container, .best-container {
+.score-container,
+.best-container {
   background: #806558;
   padding: 1.5vw;
   font-size: 3vw;
-  color: #fff;
-  border-radius: .5vw;
+  color: white;
+  border-radius: 0.5vw;
   position: relative;
   width: 12vw;
   text-align: center;
+  user-select: none;
 }
-.score-container::after { content: "Time";    position: absolute; top: .5vw; width:100%; font-size:2vw; color:#eee4da; }
-.best-container::after  { content: "Best Time";position: absolute; top: .5vw; width:100%; font-size:2vw; color:#eee4da; }
+.score-container::after {
+  content: "Time";
+  position: absolute;
+  top: 0.5vw;
+  width: 100%;
+  font-size: 2vw;
+  color: #eee4da;
+}
+.best-container::after {
+  content: "Best Time";
+  position: absolute;
+  top: 0.5vw;
+  width: 100%;
+  font-size: 2vw;
+  color: #eee4da;
+}
 
-/* Game grid: always square & fluid */
+/* Game grid: always square, responsive */
 #game-container {
   box-sizing: border-box;
   margin: 0 auto;
@@ -51,43 +67,45 @@ h1.title {
   max-width: 600px;
   aspect-ratio: 1 / 1;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(0,1fr));
+  grid-template-columns: repeat(5, 1fr);
   gap: 1vw;
   padding: 2vw;
   background: #CCA28D;
   border: 1px solid #999;
   border-radius: 1vw;
-  overflow: hidden;
   touch-action: none;
   user-select: none;
 }
 
-/* Tiles */
-#game-container > .tile {
+/* Tiles: fluid squares */
+#game-container .tile {
   background: #806558;
-  border-radius: .5vw;
+  border-radius: 0.5vw;
   aspect-ratio: 1 / 1;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 5vw;
-  color: #fff;
+  color: white;
   cursor: pointer;
   user-select: none;
 }
 
 /* Buttons & messages */
-#start-button, #restart-button {
+#start-button,
+#restart-button {
   display: block;
   margin: 2vh auto;
   padding: 1.5vw 0;
-  width: 60vw; max-width: 400px;
+  width: 60vw;
+  max-width: 400px;
   font-size: 4vw;
   background: #806558;
   color: #f9f6f2;
   border-radius: 1vw;
   text-align: center;
   cursor: pointer;
+  user-select: none;
 }
 #timer {
   font-size: 15vw;
@@ -101,4 +119,3 @@ h1.title {
   margin: 2vh auto;
   color: white;
 }
-
