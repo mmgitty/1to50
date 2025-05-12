@@ -115,19 +115,12 @@ a {
 }
 
 #game-container {
-  /* make the box always square, fluid, and never overflow the viewport */
   box-sizing: border-box;
-  width: 90vw;            /* 90% of the device width */
-  max-width: 610px;       /* never wider than its natural 570+40px */
-  aspect-ratio: 1 / 1;    /* force a 1:1 square */
-  height: auto;           /* let aspect-ratio calculate the height */
-  max-height: 90vh;       /* but never taller than 90% of the viewport */
+  width: 100%;
+  height: 100%;
+  padding: 20px;    /* keep your 20px padding */
+  margin: 0;        /* remove the 15px auto margin */
   
-  /* scale padding relative to viewport */
-  padding: 2vw;           /* ~20px on a 1000px screen, scales down on mobile */
-
-  /* keep your existing styling */
-  margin: 15px auto;
   background: #CCA28D;
   border: 1px solid #999;
   border-radius: 10px;
